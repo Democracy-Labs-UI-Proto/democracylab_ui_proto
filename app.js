@@ -42,24 +42,31 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Home; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Technologies_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Technologies.js */ "./src/components/Technologies.js");
+/* harmony import */ var _Skills_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Skills.js */ "./src/components/Skills.js");
 
-function Home() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "main-wrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "https://picsum.photos/300/300",
-    alt: "picture"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "project-info"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "project-title"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Project Name")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Et ut et sunt labore distinctio qui. Sint occaecati doloremque consectetur architecto debitis. Nobis consequatur laudantium neque neque 135 characters"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "btn-container"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    className: "btn primary-button"
-  }, "Contact"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    className: "btn secondary-button"
-  }, "See Jobs"))));
+
+
+class Home extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  render() {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "main-wrapper"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      src: "https://picsum.photos/300/300",
+      alt: "picture"
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "project-info"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "project-title"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Project Name")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Et ut et sunt labore distinctio qui. Sint occaecati doloremque consectetur architecto debitis. Nobis consequatur laudantium neque neque 135 characters"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "btn-container"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      className: "btn primary-button"
+    }, "Contact"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      className: "btn secondary-button"
+    }, "See Jobs"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Skills_js__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Technologies_js__WEBPACK_IMPORTED_MODULE_1__["default"], null));
+  }
+
 }
 
 /***/ }),
@@ -148,6 +155,76 @@ class Menu extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     }, "Sign Out"))));
   }
 
+}
+
+/***/ }),
+
+/***/ "./src/components/Skills.js":
+/*!**********************************!*\
+  !*** ./src/components/Skills.js ***!
+  \**********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Skills; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+function Skills() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "skills-container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Skills"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+    className: "skills-list"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "skill-item"
+  }, "UX-Designer"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "skill-item"
+  }, "Front-End Developer"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "skill-item"
+  }, "UI-Designer"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "skill-item"
+  }, "BackEnd-Developer"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "skill-item"
+  }, "DBA"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "skill-item"
+  }, "Project Manager")));
+}
+
+/***/ }),
+
+/***/ "./src/components/Technologies.js":
+/*!****************************************!*\
+  !*** ./src/components/Technologies.js ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Tech; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+function Tech() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "tech-container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Roles"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+    className: "skills-list"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "skill-item"
+  }, "JavaScript"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "skill-item"
+  }, "React.js"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "skill-item"
+  }, "Redux"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "skill-item"
+  }, "Node.js"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "skill-item"
+  }, "MongoDB"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "skill-item"
+  }, "Express.js")));
 }
 
 /***/ })
