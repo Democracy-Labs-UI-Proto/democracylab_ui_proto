@@ -1,10 +1,9 @@
-$primary-color: #444;
-// $primary-color: #fff;
+// $primary-color: #444;
+$primary-color: #fff;
 // could do light and dark mode setting per adding removing classes
 $text-color: #fff;
 $secondary-color: yellow;
 $show-home-image: true;
-$home-image-url: url("../assets/background.jpg");
 $background-opacity: 0.9;
 // $profile-picture: url("../assets/portrait.jpg");
 // $profile-picture-sm: url("../assets/portrait_small.jpg");
@@ -21,25 +20,25 @@ $background-opacity: 0.9;
 @mixin easeOut {
   transition: all 170ms ease-out;
 }
-@mixin background {
-  @if $show-home-image {
-    & {
-      background: $primary-color;
-      background-attachment: fixed;
-      background-size: cover;
-    }
-    &:after {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 100%;
-      min-height: calc(100vh - 60px);
-      z-index: -1;
-      background: rgba($primary-color, $background-opacity);
-    }
-  }
-}
+// @mixin background {
+//   @if $show-home-image {
+//     & {
+//       background: $primary-color;
+//       background-attachment: fixed;
+//       background-size: cover;
+//     }
+//     &:after {
+//       content: "";
+//       position: absolute;
+//       top: 0;
+//       right: 0;
+//       width: 100%;
+//       min-height: calc(100vh - 60px);
+//       z-index: -1;
+//       background: rgba($primary-color, $background-opacity);
+//     }
+//   }
+// }
 
 // Media Query Mixins
 

@@ -44,7 +44,21 @@ export default class Menu extends Component {
               className={`menu-nav-items ${this.state.show ? `show` : ``}`}
               onClick={this.menuItemClick}
             >
-              Home
+              Profile
+            </Link>
+            <Link
+              to={"/"}
+              className={`menu-nav-items ${this.state.show ? `show` : ``}`}
+              onClick={this.menuItemClick}
+            >
+              Settings
+            </Link>
+            <Link
+              to={"/"}
+              className={`menu-nav-items ${this.state.show ? `show` : ``}`}
+              onClick={this.menuItemClick}
+            >
+              Sign Out
             </Link>
           </ul>
         </nav>

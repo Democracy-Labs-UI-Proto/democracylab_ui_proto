@@ -1,0 +1,24 @@
+.roles-list {
+  background: lightgray;
+  display: grid;
+  justify-items: center;
+  grid-gap: 20px;
+  .role-item {
+    background: white;
+    width: 90%;
+    padding: 10px;
+    .role-header {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      margin-bottom: 10px;
+      button {
+        border: none;
+        border-radius: 5px;
+      }
+    }
+    .read-more {
+      text-decoration: none;
+      color: #f2a648;
+    }
+  }
+}
