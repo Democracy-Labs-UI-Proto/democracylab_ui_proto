@@ -150,11 +150,15 @@ class Menu extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       to: "/",
       className: `menu-nav-items ${this.state.show ? `show` : ``}`,
       onClick: this.menuItemClick
-    }, "Settings"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    }, "My Projects"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
       to: "/",
       className: `menu-nav-items ${this.state.show ? `show` : ``}`,
       onClick: this.menuItemClick
-    }, "Sign Out"))));
+    }, "Find Projects"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+      to: "/",
+      className: `menu-nav-items ${this.state.show ? `show` : ``}`,
+      onClick: this.menuItemClick
+    }, "Create a Project"))));
   }
 
 }
