@@ -44,6 +44,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _Technologies_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Technologies.js */ "./src/components/Technologies.js");
 /* harmony import */ var _Skills_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Skills.js */ "./src/components/Skills.js");
+/* harmony import */ var _Roles_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Roles.js */ "./src/components/Roles.js");
+
 
 
 
@@ -64,7 +66,7 @@ class Home extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       className: "btn primary-button"
     }, "Contact"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       className: "btn secondary-button"
-    }, "See Jobs"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Skills_js__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Technologies_js__WEBPACK_IMPORTED_MODULE_1__["default"], null));
+    }, "See Jobs"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Skills_js__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Technologies_js__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Roles_js__WEBPACK_IMPORTED_MODULE_3__["default"], null));
   }
 
 }
@@ -159,6 +161,51 @@ class Menu extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
 /***/ }),
 
+/***/ "./src/components/Roles.js":
+/*!*********************************!*\
+  !*** ./src/components/Roles.js ***!
+  \*********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Roles; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+class Roles extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  constructor(props) {
+    super(props);
+    this.state = {
+      roles: [1, 2, 3, 4, 5]
+    };
+  }
+
+  render() {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "section roles-container"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+      className: "section-header"
+    }, "Roles"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+      className: "roles-list"
+    }, this.state.roles.map(role => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+      key: role,
+      className: "role-item"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "role-header"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "UX-Designer"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      className: "btn primary-button"
+    }, "Apply")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Et ut et sunt labore distinctio qui. Sint occaecati doloremque consectetur architecto debitis. Nobis consequatur laudantium neque neque 135 characters...", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      className: "read-more",
+      href: "#"
+    }, "Read More"))))));
+  }
+
+}
+
+/***/ }),
+
 /***/ "./src/components/Skills.js":
 /*!**********************************!*\
   !*** ./src/components/Skills.js ***!
@@ -210,7 +257,7 @@ __webpack_require__.r(__webpack_exports__);
 function Tech() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "tech-container"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Roles"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Technologies"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     className: "skills-list"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "skill-item"
