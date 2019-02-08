@@ -5,15 +5,21 @@ export default function HeroCard(props) {
   return (
     <Fragment>
       {/* <img src={props.hero.projectimage} alt={props.hero.projectimagealt} /> */}
-      <img src={DemoLabPic} alt={props.hero.projectimagealt} />
+      <div className="hero-img-container container">
+        <img className="hero-img" src={DemoLabPic} alt={props.hero.projectimagealt} />
+      </div>
       <div className="hero-info container column big-space">
-        <div className="hero-title container shadow-title">
+        <div className="hero-title container">
           <h1>{props.hero.projectname}</h1>
         </div>
         <p>{props.hero.projectdescription}</p>
         <div className="btn-container">
-          <button className="btn primary-button">Contact</button>
-          <button className="btn secondary-button">See Roles</button>
+          <a href="#roles" className="btn primary-button container">
+            See Roles
+          </a>
+          <a href="#contact" className="btn secondary-button container">
+            Contact
+          </a>
         </div>
       </div>
     </Fragment>

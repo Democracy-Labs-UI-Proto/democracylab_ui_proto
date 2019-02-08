@@ -1,23 +1,23 @@
 header {
   position: fixed;
+  z-index: 3;
 }
 .menu-btn-container {
   position: absolute;
   top: 20px;
   left: 20px;
-  z-index: 2;
   width: 50px;
   height: 50px;
   border-radius: 50%;
   &.close {
     background: none;
+    z-index: 4;
   }
 }
 .menu-btn {
   position: absolute;
   right: 11px;
   top: 16px;
-  z-index: 3;
   cursor: pointer;
   @include easeOut;
 
@@ -33,6 +33,7 @@ header {
   &.close {
     transform: rotate(180deg);
     .btn-line {
+      background: $primary-background-color;
       // Line 1 - Rotate
       &:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
@@ -52,7 +53,6 @@ header {
 // Menu overlay
 .menu {
   position: relative;
-  // z-index: 99;
   visibility: hidden;
   &.show {
     visibility: visible;
@@ -60,14 +60,16 @@ header {
   &-nav {
     display: flex;
     flex-flow: column wrap;
+    position: absolute;
     width: 270px;
     height: 100vh;
+    top: 0;
+    left: -270px;
     overflow: hidden;
     padding-top: 85px;
-    transform: translate3d(-40vw, 0, 0);
     @include easeOut;
     &.show {
-      transform: translate3d(0, 0, 0);
+      left: 0;
     }
   }
   .menu-nav-items {
@@ -75,11 +77,12 @@ header {
     padding: 0.8rem 35px;
     font-size: 15px;
     font-weight: 500;
-    color: $primary-text-color;
+    color: set-text-color($primary-text-color);
     text-decoration: none;
     @include easeOut;
     &:hover {
       background: lightgrey;
+      color: $primary-text-color;
     }
   }
 }

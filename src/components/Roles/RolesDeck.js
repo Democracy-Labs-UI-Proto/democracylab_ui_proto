@@ -11,7 +11,7 @@ export default class Roles extends Component {
     return (
       <div className="roles-container">
         <h2 className="title small-space">Available Roles</h2>
-        <ul className="roles-list big-space">
+        <ul id="roles" className="roles-list big-space">
           {this.props.roles.map((role, idx) => (
             <RoleCard key={idx} title={role.title} content={role.description} />
           ))}

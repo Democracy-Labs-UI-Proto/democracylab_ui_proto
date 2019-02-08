@@ -4,7 +4,7 @@ import InfoDeck from './Info/InfoDeck';
 import MenuDeck from './Menu/MenuDeck';
 import HeroDeck from './Hero/HeroDeck';
 import TeamDeck from './Team/TeamDeck';
-// import ContactDeck from './Contact/ContactDeck';
+import ContactDeck from './Contact/ContactDeck';
 import Footer from './Footer/Footer';
 import { connect } from 'react-redux';
 
@@ -18,7 +18,7 @@ function MainDeck(props) {
       ))}
       <RolesDeck roles={props.state.roles} />
       <TeamDeck team={props.state.team} />
-      {/* <ContactDeck /> */}
+      <ContactDeck />
       <Footer />
     </Fragment>
   );
