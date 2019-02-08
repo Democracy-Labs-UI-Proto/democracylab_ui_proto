@@ -373,7 +373,9 @@ class MenuDeck extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     _defineProperty(this, "menuClick", () => {
       this.setState(prevState => ({
         show: !prevState.show
-      }));
+      }), () => {
+        document.getElementsByTagName('body')[0].classList.toggle('show');
+      });
     });
 
     this.state = {
@@ -382,7 +384,9 @@ class MenuDeck extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   }
 
   render() {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_MenuHamburger__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", {
+      className: `${this.state.show ? `show` : ``}`
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_MenuHamburger__WEBPACK_IMPORTED_MODULE_1__["default"], {
       menuClick: this.menuClick,
       show: this.state.show
     }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
@@ -484,9 +488,9 @@ class Roles extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "roles-container"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+      id: "roles",
       className: "title small-space"
     }, "Available Roles"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-      id: "roles",
       className: "roles-list big-space"
     }, this.props.roles.map((role, idx) => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_RoleCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
       key: idx,

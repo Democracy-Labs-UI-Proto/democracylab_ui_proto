@@ -19,6 +19,11 @@
   &.secondary-button {
     border: 2px solid $democracy_orange;
     color: $democracy_orange;
+    &:hover,
+    &:focus {
+      color: rgb(255, 98, 0);
+      border: 2px solid rgb(255, 98, 0);
+    }
   }
 }
 .btn-container {
