@@ -1,0 +1,13 @@
+.hero-info {
+  .hero-title {
+    justify-content: center;
+    background: set-text-color($primary-background-color);
+    h1 {
+      padding: 5px 0;
+      color: set-text-color($primary-text-color);
+    }
+  }
+  p {
+    padding: 20px;
+  }
+}

@@ -1,25 +1,4 @@
-@import "_config";
-@import "_menu";
-@import "_mobile";
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  color: set-text-color($primary-color);
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  // min-height: calc(100vh - 30px);
-  max-width: 500px;
-  margin: 0 auto;
-}
-
-h1,
-h2,
-h3 {
-  margin: 0;
-}
-
-@import "_layout";
+@import './config/config';
+@import './base/base';
+@import './layout/flex_grid';
+@import './modules/index';

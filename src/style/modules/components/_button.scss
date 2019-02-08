@@ -1,0 +1,27 @@
+.btn {
+  border: none;
+  border-radius: 5px;
+  height: 45px;
+  margin: 2px;
+  background: $primary-background-color;
+  color: set-text-color($primary-background-color);
+  font-size: 20px;
+  cursor: pointer;
+
+  &.primary-button {
+    color: white;
+    background-image: linear-gradient(to top right, #e46300, #ffb06b);
+    &:hover,
+    &:focus {
+      background: rgb(255, 98, 0);
+    }
+  }
+  &.secondary-button {
+    border: 2px solid $democracy_orange;
+    color: $democracy_orange;
+  }
+}
+.btn-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}

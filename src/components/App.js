@@ -1,17 +1,21 @@
-import React, { Fragment } from "react";
-import { HashRouter, Route } from "react-router-dom";
-import Menu from "./Menu.js";
-// import Footer from "./Footer.js";
-import Home from "./Home.js";
+import React, { Fragment, Component } from 'react';
+import { HashRouter, Route } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import MainDeck from './MainDeck';
+import createAppStore from '../store/store';
 
-export default function App() {
-  return (
-    <HashRouter>
-      <Fragment>
-        <Menu />
-        <Route exact path="/" component={Home} />
-        {/* <Footer /> */}
-      </Fragment>
-    </HashRouter>
-  );
+const store = createAppStore();
+
+export default class App extends Component {
+  render() {
+    return (
+      <Provider store={store}>
+        <HashRouter>
+          <Fragment>
+            <Route exact path="/" component={MainDeck} />
+          </Fragment>
+        </HashRouter>
+      </Provider>
+    );
+  }
 }

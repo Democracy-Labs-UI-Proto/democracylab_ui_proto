@@ -1,0 +1,13 @@
+.info-list {
+  justify-content: center;
+  flex-wrap: wrap;
+  .info-item {
+    padding: 8px;
+    margin: 5px;
+    height: 40px;
+    border-radius: 20px;
+    background: $secondary-background-color;
+    display: grid;
+    align-items: center;
+  }
+}
