@@ -23,27 +23,94 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return App; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/index.js");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _MainDeck__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./MainDeck */ "./src/components/MainDeck.js");
-/* harmony import */ var _store_store__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../store/store */ "./src/store/store.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _MainDeck__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./MainDeck */ "./src/components/MainDeck.js");
+/* harmony import */ var _store_store__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../store/store */ "./src/store/store.js");
+ // import { HashRouter, Route } from 'react-router-dom';
 
 
 
 
-
-const store = Object(_store_store__WEBPACK_IMPORTED_MODULE_4__["default"])();
+const store = Object(_store_store__WEBPACK_IMPORTED_MODULE_3__["default"])();
 class App extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   render() {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_redux__WEBPACK_IMPORTED_MODULE_2__["Provider"], {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_redux__WEBPACK_IMPORTED_MODULE_1__["Provider"], {
       store: store
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["HashRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
-      exact: true,
-      path: "/",
-      component: _MainDeck__WEBPACK_IMPORTED_MODULE_3__["default"]
-    }))));
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_MainDeck__WEBPACK_IMPORTED_MODULE_2__["default"], null)));
   }
 
+}
+
+/***/ }),
+
+/***/ "./src/components/Contact/ContactCard.js":
+/*!***********************************************!*\
+  !*** ./src/components/Contact/ContactCard.js ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ContactCard; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+function ContactCard() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "form-input-container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "text",
+    placeholder: "Name",
+    required: ""
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "fas fa-user"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "form-input-container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "text",
+    placeholder: "example@email.com",
+    required: ""
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "fas fa-envelope"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "form-input-container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
+    placeholder: "Message",
+    cols: "30",
+    rows: "10",
+    required: ""
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "fas fa-pen"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "btn secondary-button"
+  }, "Send"));
+}
+
+/***/ }),
+
+/***/ "./src/components/Contact/ContactDeck.js":
+/*!***********************************************!*\
+  !*** ./src/components/Contact/ContactDeck.js ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ContactDeck; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _ContactCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ContactCard */ "./src/components/Contact/ContactCard.js");
+
+
+function ContactDeck() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+    id: "contact",
+    className: "form-title title small-space"
+  }, "Contact"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+    className: "contact-container gradient container column shadow big-space"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ContactCard__WEBPACK_IMPORTED_MODULE_1__["default"], null)));
 }
 
 /***/ }),
@@ -86,20 +153,25 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function HeroCard(props) {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "hero-img-container container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    className: "hero-img",
     src: _assets_democracyLab_png__WEBPACK_IMPORTED_MODULE_1___default.a,
     alt: props.hero.projectimagealt
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "hero-info container column big-space"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "hero-title container shadow-title"
+    className: "hero-title container"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, props.hero.projectname)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, props.hero.projectdescription), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "btn-container"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    className: "btn primary-button"
-  }, "Contact"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    className: "btn secondary-button"
-  }, "See Roles"))));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "#roles",
+    className: "btn primary-button container"
+  }, "See Roles"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "#contact",
+    className: "btn secondary-button container"
+  }, "Contact"))));
 }
 
 /***/ }),
@@ -144,7 +216,7 @@ __webpack_require__.r(__webpack_exports__);
 
 function InfoCard(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    className: "info-item shadow"
+    className: "info-item"
   }, props.infoitem);
 }
 
@@ -194,14 +266,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Menu_MenuDeck__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Menu/MenuDeck */ "./src/components/Menu/MenuDeck.js");
 /* harmony import */ var _Hero_HeroDeck__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Hero/HeroDeck */ "./src/components/Hero/HeroDeck.js");
 /* harmony import */ var _Team_TeamDeck__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Team/TeamDeck */ "./src/components/Team/TeamDeck.js");
-/* harmony import */ var _Footer_Footer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Footer/Footer */ "./src/components/Footer/Footer.js");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _Contact_ContactDeck__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Contact/ContactDeck */ "./src/components/Contact/ContactDeck.js");
+/* harmony import */ var _Footer_Footer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Footer/Footer */ "./src/components/Footer/Footer.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 
 
 
 
 
- // import ContactDeck from './Contact/ContactDeck';
+
 
 
 
@@ -218,14 +291,14 @@ function MainDeck(props) {
     roles: props.state.roles
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Team_TeamDeck__WEBPACK_IMPORTED_MODULE_5__["default"], {
     team: props.state.team
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Footer_Footer__WEBPACK_IMPORTED_MODULE_6__["default"], null));
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Contact_ContactDeck__WEBPACK_IMPORTED_MODULE_6__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Footer_Footer__WEBPACK_IMPORTED_MODULE_7__["default"], null));
 }
 
 const mapStateToProps = state => ({
   state
 });
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_7__["connect"])(mapStateToProps)(MainDeck));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_8__["connect"])(mapStateToProps)(MainDeck));
 
 /***/ }),
 
@@ -241,15 +314,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return MenuItemCard; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/index.js");
-
+ // import { Link } from 'react-router-dom';
 
 function MenuItemCard(props) {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: '/',
-    className: `menu-nav-items ${props.show ? `show` : ``}`,
-    onClick: props.menuClick
-  }, props.title);
+  return (// <Link
+    //   to={'/'}
+    //   className={`menu-nav-items ${props.show ? `show` : ``}`}
+    //   onClick={props.menuClick}
+    // >
+    //   {props.title}
+    // </Link>
+    react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      to: '/',
+      className: `menu-nav-items ${props.show ? `show` : ``}`,
+      onClick: props.menuClick
+    }, props.title)
+  );
 }
 
 /***/ }),
@@ -406,6 +486,7 @@ class Roles extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
       className: "title small-space"
     }, "Available Roles"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+      id: "roles",
       className: "roles-list big-space"
     }, this.props.roles.map((role, idx) => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_RoleCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
       key: idx,
@@ -433,7 +514,7 @@ __webpack_require__.r(__webpack_exports__);
 
 function TeamCard(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    className: "small-padding small-space shadow"
+    className: "small-padding small-space shadow-light"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, props.teamitem.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, props.teamitem.role));
 }
 
