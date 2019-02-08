@@ -10,6 +10,10 @@ body {
   max-width: 450px;
   margin: 0 auto;
   position: relative;
+  &.show {
+    // prevent scrolling when menu is open
+    overflow: hidden;
+  }
 }
 
 h1,
