@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: $primary-text-color;
+  font-family: $primary-font;
+  max-width: 450px;
+  margin: 0 auto;
+  position: relative;
+  &.show {
+    // prevent scrolling when menu is open
+    overflow: hidden;
+  }
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+a {
+  color: $primary-text-color;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}

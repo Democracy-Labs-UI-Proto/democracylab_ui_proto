@@ -1,0 +1,25 @@
+.hero-img-container {
+  height: 45vh;
+  width: 100%;
+  justify-content: center;
+  .hero-img {
+    width: 250px;
+  }
+}
+.hero-info {
+  .hero-title {
+    justify-content: center;
+    h1 {
+      padding: 5px 0;
+      font-size: 1.8em;
+    }
+  }
+  .primary-button,
+  .secondary-button {
+    align-items: center;
+    justify-content: center;
+  }
+  p {
+    padding: 20px;
+  }
+}

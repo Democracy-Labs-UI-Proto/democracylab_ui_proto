@@ -1,0 +1,40 @@
+.contact-container {
+  // position: relative;
+  // z-index: -2;
+  align-items: center;
+  justify-content: center;
+  margin: 15px;
+  padding: 15px;
+  border-radius: 10px;
+  .form-input-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 10px;
+    i {
+      position: absolute;
+      z-index: 0;
+      top: 12px;
+      left: 10px;
+    }
+    input,
+    textarea {
+      position: relative;
+      // z-index: 0;
+      border: none;
+      border-radius: 15px;
+      padding: 5px 5px 5px 35px;
+      width: 100%;
+    }
+    input {
+      height: 40px;
+    }
+    textarea {
+      resize: none;
+      padding-top: 12px;
+    }
+  }
+  button {
+    height: 40px;
+    width: 100px;
+  }
+}

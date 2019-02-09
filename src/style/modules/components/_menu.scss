@@ -1,21 +1,31 @@
-// Menu Button
+header {
+  position: fixed;
+  z-index: 3;
+  width: 100%;
+  &.show {
+    &::after {
+      content: '';
+      display: block;
+      background-color: rgba(0, 0, 0, 0.8);
+      height: 100vh;
+      max-width: 450px;
+    }
+  }
+}
 .menu-btn-container {
-  float: right;
-  position: relative;
-  right: 35px;
-  top: 35px;
-  z-index: 2;
+  position: absolute;
+  top: 20px;
+  left: 20px;
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: black;
   &.close {
     background: none;
+    z-index: 4;
   }
 }
 .menu-btn {
   position: absolute;
-  z-index: 3;
   right: 11px;
   top: 16px;
   cursor: pointer;
@@ -25,17 +35,19 @@
     width: 28px;
     height: 3px;
     margin: 0 0 5px 0;
-    background: set-text-color($primary-color);
+    border-radius: 15px;
+    // background: set-text-color($primary-background-color);
+    background: $primary-background-color;
     @include easeOut;
   }
   // Transform hamburger icon into "X"
   &.close {
     transform: rotate(180deg);
     .btn-line {
+      background: $primary-background-color;
       // Line 1 - Rotate
       &:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
-        background: set-text-color(white);
       }
       // Line 2 - Hide
       &:nth-child(2) {
@@ -44,7 +56,6 @@
       // Line 3 - Rotate
       &:nth-child(3) {
         transform: rotate(-45deg) translate(7px, -6px);
-        background: set-text-color(white);
       }
     }
   }
@@ -52,44 +63,37 @@
 
 // Menu overlay
 .menu {
-  position: fixed;
-  top: 0;
-  // right: 0;
-  width: 100%;
+  position: relative;
   visibility: hidden;
   &.show {
     visibility: visible;
-    // dark overlay is made visible
   }
   &-nav {
     display: flex;
     flex-flow: column wrap;
-    float: right;
-    // have to float none at small media query?
-    width: 150px;
+    position: absolute;
+    width: 270px;
     height: 100vh;
+    top: 0;
+    left: -270px;
     overflow: hidden;
-    margin: 0;
-    padding-top: 90px;
-    background: white;
-    list-style: none;
-    transform: translate3d(100vw, 0, 0);
+    padding-top: 85px;
     @include easeOut;
     &.show {
-      transform: translate3d(0, 0, 0);
+      left: 0;
     }
   }
   .menu-nav-items {
     display: inline-block;
-    position: relative;
-    font-size: 15px;
     padding: 0.8rem 35px;
+    font-size: 15px;
     font-weight: 500;
-    color: set-text-color(white);
+    color: set-text-color($primary-text-color);
     text-decoration: none;
     @include easeOut;
     &:hover {
       background: lightgrey;
+      color: $primary-text-color;
     }
   }
 }
