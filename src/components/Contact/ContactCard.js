@@ -3,6 +3,9 @@ import React, { Fragment, Component } from 'react';
 export default class ContactCard extends Component {
   onSubmit = e => {
     e.preventDefault();
+    document.getElementById('form').reset();
+
+    // TODO: expose pop up modal with X to close saying message sent!
   };
 
   render() {

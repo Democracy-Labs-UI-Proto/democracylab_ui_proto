@@ -36,7 +36,6 @@ header {
     height: 3px;
     margin: 0 0 5px 0;
     border-radius: 15px;
-    // background: set-text-color($primary-background-color);
     background: $primary-background-color;
     @include easeOut;
   }
@@ -88,11 +87,11 @@ header {
     padding: 0.8rem 35px;
     font-size: 15px;
     font-weight: 500;
-    color: set-text-color($primary-text-color);
+    color: invert-text-color($primary-text-color);
     text-decoration: none;
     @include easeOut;
     &:hover {
-      background: lightgrey;
+      background: $secondary-background-color;
       color: $primary-text-color;
     }
   }

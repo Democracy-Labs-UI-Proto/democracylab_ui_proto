@@ -1,5 +1,4 @@
-// Color Palette (placholder change)
-
+// Color Palette
 $primary-background-color: #fff;
 $secondary-background-color: #e4e4e4;
 $secondary-background-color-darker: #323234;
@@ -15,10 +14,17 @@ $negative-cta-color: #ca3b33;
 $undo-cta-color: #9b3eca;
 $hover-cta-color: rgb(187, 0, 150);
 
-$democracy_orange: #f2a648;
+// DemocracyLab Oranges
+$demo-orange: #f2a648;
+$demo-orange-light: #ffb06b;
+$demo-orange-dark: rgb(255, 98, 0);
 
-// Dynamically Set Color
-@function set-text-color($color) {
+// Menu Blues
+$menu-blue-light: #005f74;
+$menu-blue-dark: #00479d;
+
+// Dynamically Invert Color
+@function invert-text-color($color) {
   @if (lightness($color) > 40) {
     @return #000;
   } @else {

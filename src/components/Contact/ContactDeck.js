@@ -7,7 +7,7 @@ export default function ContactDeck() {
       <h2 id="contact" className="form-title title small-space">
         Contact
       </h2>
-      <form className="contact-container gradient container column shadow big-space">
+      <form id="form" className="contact-container gradient container column shadow big-space">
         <ContactCard />
       </form>
     </Fragment>
