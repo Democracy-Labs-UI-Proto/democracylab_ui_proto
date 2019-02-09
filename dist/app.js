@@ -1,5 +1,36 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["app"],{
 
+/***/ "./src/assets/assets_export.js":
+/*!*************************************!*\
+  !*** ./src/assets/assets_export.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _profile_pics_mark_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./profile_pics/mark.jpg */ "./src/assets/profile_pics/mark.jpg");
+/* harmony import */ var _profile_pics_mark_jpg__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_profile_pics_mark_jpg__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _profile_pics_marlon_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./profile_pics/marlon.jpg */ "./src/assets/profile_pics/marlon.jpg");
+/* harmony import */ var _profile_pics_marlon_jpg__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_profile_pics_marlon_jpg__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _profile_pics_adrian_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./profile_pics/adrian.jpg */ "./src/assets/profile_pics/adrian.jpg");
+/* harmony import */ var _profile_pics_adrian_jpg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_profile_pics_adrian_jpg__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _profile_pics_tracy_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./profile_pics/tracy.jpg */ "./src/assets/profile_pics/tracy.jpg");
+/* harmony import */ var _profile_pics_tracy_jpg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_profile_pics_tracy_jpg__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _profile_pics_khoa_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./profile_pics/khoa.jpg */ "./src/assets/profile_pics/khoa.jpg");
+/* harmony import */ var _profile_pics_khoa_jpg__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_profile_pics_khoa_jpg__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _profile_pics_paloma_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./profile_pics/paloma.jpg */ "./src/assets/profile_pics/paloma.jpg");
+/* harmony import */ var _profile_pics_paloma_jpg__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_profile_pics_paloma_jpg__WEBPACK_IMPORTED_MODULE_5__);
+
+
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ([_profile_pics_mark_jpg__WEBPACK_IMPORTED_MODULE_0___default.a, _profile_pics_marlon_jpg__WEBPACK_IMPORTED_MODULE_1___default.a, _profile_pics_adrian_jpg__WEBPACK_IMPORTED_MODULE_2___default.a, _profile_pics_tracy_jpg__WEBPACK_IMPORTED_MODULE_3___default.a, _profile_pics_khoa_jpg__WEBPACK_IMPORTED_MODULE_4___default.a, _profile_pics_paloma_jpg__WEBPACK_IMPORTED_MODULE_5___default.a]);
+
+/***/ }),
+
 /***/ "./src/assets/democracyLab.png":
 /*!*************************************!*\
   !*** ./src/assets/democracyLab.png ***!
@@ -8,6 +39,72 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "src/assets/democracyLab-15720ba7.png";
+
+/***/ }),
+
+/***/ "./src/assets/profile_pics/adrian.jpg":
+/*!********************************************!*\
+  !*** ./src/assets/profile_pics/adrian.jpg ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "src/assets/profile_pics/adrian-2113f4be.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/profile_pics/khoa.jpg":
+/*!******************************************!*\
+  !*** ./src/assets/profile_pics/khoa.jpg ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "src/assets/profile_pics/khoa-88ddae15.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/profile_pics/mark.jpg":
+/*!******************************************!*\
+  !*** ./src/assets/profile_pics/mark.jpg ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "src/assets/profile_pics/mark-07f54534.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/profile_pics/marlon.jpg":
+/*!********************************************!*\
+  !*** ./src/assets/profile_pics/marlon.jpg ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "src/assets/profile_pics/marlon-7248a4a0.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/profile_pics/paloma.jpg":
+/*!********************************************!*\
+  !*** ./src/assets/profile_pics/paloma.jpg ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "src/assets/profile_pics/paloma-48d66f08.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/profile_pics/tracy.jpg":
+/*!*******************************************!*\
+  !*** ./src/assets/profile_pics/tracy.jpg ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "src/assets/profile_pics/tracy-62400cfb.jpg";
 
 /***/ }),
 
@@ -518,8 +615,14 @@ __webpack_require__.r(__webpack_exports__);
 
 function TeamCard(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    className: "small-padding small-space shadow-light"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, props.teamitem.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, props.teamitem.role));
+    className: "team-container small-padding small-space shadow-light container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    className: "team-image",
+    src: props.img,
+    alt: `Picture of ${props.teamitem.name}`
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "team-text-container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, props.teamitem.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, props.teamitem.role)));
 }
 
 /***/ }),
@@ -537,6 +640,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _TeamCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./TeamCard */ "./src/components/Team/TeamCard.js");
+/* harmony import */ var _assets_assets_export__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../assets/assets_export */ "./src/assets/assets_export.js");
+
 
  // TODO: have to create an array of images in the export for this to iterate over
 
@@ -547,6 +652,7 @@ function TeamDeck(props) {
     className: "team-list container column big-space"
   }, props.team.map((ele, idx) => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_TeamCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
     key: idx,
+    img: _assets_assets_export__WEBPACK_IMPORTED_MODULE_2__["default"][idx],
     teamitem: ele
   }))));
 }

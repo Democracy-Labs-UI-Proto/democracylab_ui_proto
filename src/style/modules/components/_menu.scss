@@ -36,7 +36,8 @@ header {
     height: 3px;
     margin: 0 0 5px 0;
     border-radius: 15px;
-    background: set-text-color($primary-background-color);
+    // background: set-text-color($primary-background-color);
+    background: $primary-background-color;
     @include easeOut;
   }
   // Transform hamburger icon into "X"

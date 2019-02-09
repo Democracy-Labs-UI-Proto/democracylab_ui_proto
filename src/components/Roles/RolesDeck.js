@@ -13,7 +13,7 @@ export default class Roles extends Component {
         <h2 id="roles" className="title small-space">
           Available Roles
         </h2>
-        <ul className="roles-list big-space">
+        <ul className="roles-list container column big-space">
           {this.props.roles.map((role, idx) => (
             <RoleCard key={idx} title={role.title} content={role.description} />
           ))}
