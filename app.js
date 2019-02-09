@@ -152,36 +152,63 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ContactCard; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
 
-function ContactCard() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "form-input-container"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    type: "text",
-    placeholder: "Name",
-    required: ""
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "fas fa-user"
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "form-input-container"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    type: "text",
-    placeholder: "example@email.com",
-    required: ""
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "fas fa-envelope"
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "form-input-container"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
-    placeholder: "Message",
-    cols: "30",
-    rows: "10",
-    required: ""
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "fas fa-pen"
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    className: "btn secondary-button"
-  }, "Send"));
+  return obj;
+}
+
+
+class ContactCard extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  constructor() {
+    super(...arguments);
+
+    _defineProperty(this, "onSubmit", e => {
+      e.preventDefault();
+    });
+  }
+
+  render() {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "form-input-container"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      type: "text",
+      placeholder: "Name",
+      required: ""
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      className: "fas fa-user"
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "form-input-container"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      type: "text",
+      placeholder: "example@email.com",
+      required: ""
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      className: "fas fa-envelope"
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "form-input-container"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
+      placeholder: "Message",
+      cols: "30",
+      rows: "10",
+      required: ""
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      className: "fas fa-pen"
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      onClick: this.onSubmit,
+      className: "btn secondary-button"
+    }, "Send"));
+  }
+
 }
 
 /***/ }),
@@ -550,12 +577,14 @@ function RoleCard(props) {
     className: "role-item shadow"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "role-header"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, props.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    className: "btn primary-button"
-  }, "Apply")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, props.content, "...", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, props.title)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "small-space"
+  }, props.content, "...", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     className: "read-more",
     href: "#"
-  }, "Read More")));
+  }, "Read More")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "btn primary-button role-button"
+  }, "Apply"));
 }
 
 /***/ }),
@@ -588,7 +617,7 @@ class Roles extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       id: "roles",
       className: "title small-space"
     }, "Available Roles"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-      className: "roles-list big-space"
+      className: "roles-list container column big-space"
     }, this.props.roles.map((role, idx) => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_RoleCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
       key: idx,
       title: role.title,
