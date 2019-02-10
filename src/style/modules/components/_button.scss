@@ -4,25 +4,25 @@
   height: 45px;
   margin: 2px;
   background: $primary-background-color;
-  color: set-text-color($primary-background-color);
+  color: invert-text-color($primary-background-color);
   font-size: 20px;
   cursor: pointer;
 
   &.primary-button {
-    color: white;
-    background-image: linear-gradient(to top right, #e46300, #ffb06b);
+    color: invert-text-color($primary-text-color);
+    background-image: linear-gradient(to top right, $demo-orange-dark, $demo-orange);
     &:hover,
     &:focus {
-      background: rgb(255, 98, 0);
+      background: $demo-orange-dark;
     }
   }
   &.secondary-button {
-    border: 2px solid $democracy_orange;
-    color: $democracy_orange;
+    border: 2px solid $demo-orange;
+    color: $demo-orange;
     &:hover,
     &:focus {
-      color: rgb(255, 98, 0);
-      border: 2px solid rgb(255, 98, 0);
+      color: $demo-orange-dark;
+      border: 2px solid $demo-orange-dark;
     }
   }
 }

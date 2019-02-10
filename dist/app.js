@@ -174,6 +174,7 @@ class ContactCard extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
     _defineProperty(this, "onSubmit", e => {
       e.preventDefault();
+      document.getElementById('form').reset(); // TODO: expose pop up modal with X to close saying message sent!
     });
   }
 
@@ -233,6 +234,7 @@ function ContactDeck() {
     id: "contact",
     className: "form-title title small-space"
   }, "Contact"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+    id: "form",
     className: "contact-container gradient container column shadow big-space"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ContactCard__WEBPACK_IMPORTED_MODULE_1__["default"], null)));
 }
@@ -571,20 +573,59 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return RoleCard; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
 
-function RoleCard(props) {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    className: "role-item shadow"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "role-header"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, props.title)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "small-space"
-  }, props.content, "...", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    className: "read-more",
-    href: "#"
-  }, "Read More")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    className: "btn primary-button role-button"
-  }, "Apply"));
+  return obj;
+}
+
+
+class RoleCard extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  constructor(props) {
+    super(props);
+
+    _defineProperty(this, "readMore", e => {
+      // show/hide expander
+      let select = document.getElementById(`${e.target.id}`);
+      select.getElementsByClassName('expander')[0].classList.toggle('show'); // toggle show more / show less text
+
+      let text = select.getElementsByTagName('a')[0];
+      select.getElementsByClassName('expander')[0].classList.contains('show') ? text.innerHTML = '&nbsp;Show Less' : text.innerHTML = '&nbsp;Read More';
+    });
+
+    this.readMore = this.readMore.bind(this);
+  }
+
+  render() {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+      id: this.props.id,
+      className: "role-item shadow"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "role-header"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, this.props.title)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      className: "small-space"
+    }, this.props.content, ".", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      id: this.props.id,
+      onClick: this.readMore,
+      className: "read-more"
+    }, "\xA0Read More")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "expander"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Key Responsibilites"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, this.props.list.map((ele, idx) => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+      key: idx
+    }, ele)))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      className: "btn primary-button role-button"
+    }, "Apply"));
+  }
+
 }
 
 /***/ }),
@@ -610,7 +651,6 @@ class Roles extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   }
 
   render() {
-    // TODO change roles-container class to be just container (flex)
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "roles-container"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
@@ -620,8 +660,10 @@ class Roles extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       className: "roles-list container column big-space"
     }, this.props.roles.map((role, idx) => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_RoleCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
       key: idx,
+      id: idx,
       title: role.title,
-      content: role.description
+      content: role.description,
+      list: role.list
     }))));
   }
 
@@ -672,7 +714,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _assets_assets_export__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../assets/assets_export */ "./src/assets/assets_export.js");
 
 
- // TODO: have to create an array of images in the export for this to iterate over
 
 function TeamDeck(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
@@ -714,19 +755,24 @@ const data = {
   }],
   roles: [{
     title: 'Frontend Developer',
-    description: 'The Senior Front-End Web Developer volunteer position will partner with the UX lead and champion the front-end effort to create delightful user experiences'
+    description: 'The Senior Front-End Web Developer volunteer position will partner with the UX lead and champion the front-end effort to create delightful user experiences',
+    list: ['Use CSS, HTML, and React to create front end of platform', 'Collaborate effectively with Design and Back-End Development teams', 'Submit work on Github']
   }, {
     title: 'Backend Developer',
-    description: 'The Senior Back-End Developer volunteer position will lead the technical effort to build the functionality of the web platform'
+    description: 'The Senior Back-End Developer volunteer position will lead the technical effort to build the functionality of the web platform',
+    list: ['Create software architecture that builds upon the existing back-end system architecture', 'Contribute to back-end team in its development efforts', 'Use Python, Django, and PostgreSQL to build new back end features for platform', 'Submit work on Github']
   }, {
     title: 'UI/UX Designer',
-    description: 'The UX Designer volunteer position will research and design experiences to help users meet their goals'
+    description: 'The UX Designer volunteer position will research and design experiences to help users meet their goals',
+    list: ['Review relevant research performed by DemocracyLab related to design tasks', 'Conduct research interviews and exercise with potential users', ' Create designs using Sketch or other design programs', 'Create prototypes using InVision, Marvel, or similar programs', 'Conduct usability tests']
   }, {
     title: 'Director of Operations',
-    description: 'The Director of Operations will lead DemocracyLab’s Operations team to provide infrastructure to support the work of the organization'
+    description: 'The Director of Operations will lead DemocracyLab’s Operations team to provide infrastructure to support the work of the organization',
+    list: ['Recruit and manage Operations team members', 'Manage DemocracyLab’s volunteer recruitment efforts', 'Oversee management of DemocracyLab’s information technology resources', 'Oversee administration of DemocracyLab’s Salesforce instance']
   }, {
     title: 'Director of Marketing',
-    description: 'The Director of Marketing will lead DemocracyLab’s Marketing team to increase brand awareness and cultivate relationships with participating projects, nonprofits, governments and volunteers'
+    description: 'The Director of Marketing will lead DemocracyLab’s Marketing team to increase brand awareness and cultivate relationships with participating projects, nonprofits, governments and volunteers',
+    list: ['Manage Marketing team members and help them achieve their volunteer and professional goals', 'Oversee content creation and dissemination through social media and blogs', 'Cultivate relationships with local and national media', 'Oversee relationship management with participating projects, nonprofits, governments and volunteers']
   }],
   menus: {
     home: ['Profile', 'My Projects', 'Find Projects', 'Create a Project']

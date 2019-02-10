@@ -2,8 +2,6 @@ import React, { Fragment } from 'react';
 import TeamCard from './TeamCard';
 import TeamPics from '../../assets/assets_export';
 
-// TODO: have to create an array of images in the export for this to iterate over
-
 export default function TeamDeck(props) {
   return (
     <Fragment>

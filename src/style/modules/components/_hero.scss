@@ -1,9 +1,9 @@
 .hero-img-container {
-  height: 45vh;
   width: 100%;
   justify-content: center;
   .hero-img {
-    width: 250px;
+    max-width: 250px;
+    object-fit: contain;
   }
 }
 .hero-info {

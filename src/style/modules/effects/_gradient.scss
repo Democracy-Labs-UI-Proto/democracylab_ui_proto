@@ -1,6 +1,6 @@
 .gradient {
-  background-image: linear-gradient(to top right, #e46300, #ffb06b);
+  background-image: linear-gradient(to top right, $demo-orange-dark, $demo-orange-light);
 }
 .gradient-blue {
-  background-image: linear-gradient(to top right, #005f74, #00479d);
+  background-image: linear-gradient(to top right, $menu-blue-light, $menu-blue-dark);
 }

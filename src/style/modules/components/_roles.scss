@@ -1,8 +1,6 @@
 .roles-container {
   .roles-list {
     justify-content: center;
-    // grid-gap: 20px;
-    // padding: 20px 0;
     background: $secondary-background-color;
     .role-item {
       padding: 10px;
@@ -17,10 +15,40 @@
       }
       .read-more {
         text-decoration: none;
-        color: $democracy-orange;
+        color: $demo-orange;
       }
       .role-button {
         width: 100%;
+      }
+      a {
+        cursor: pointer;
+        &:hover,
+        &:focus {
+          color: $demo-orange-dark;
+        }
+      }
+      // handles the card expansion
+      .expander {
+        @include easeOut();
+        max-height: 0;
+        opacity: 0;
+        min-height: 0;
+        overflow: hidden;
+        margin-top: 0;
+        &.show {
+          max-height: 150px;
+          // min-height: 200px;
+          overflow: scroll;
+          margin-top: 30px;
+          opacity: 1;
+          margin-bottom: 20px;
+        }
+      }
+      ul {
+        list-style-type: disc;
+        li {
+          margin-left: 34px;
+        }
       }
     }
   }
