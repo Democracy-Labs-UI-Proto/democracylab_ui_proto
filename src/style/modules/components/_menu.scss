@@ -3,6 +3,7 @@ header {
   z-index: 3;
   width: 100%;
   &.show {
+    // dark after pseudoelement overlay 100% and because it covers 100% it prevents clicking
     &::after {
       content: '';
       display: block;

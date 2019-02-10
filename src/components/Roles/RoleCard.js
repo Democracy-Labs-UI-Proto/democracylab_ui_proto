@@ -11,7 +11,7 @@ export default class RoleCard extends Component {
     let select = document.getElementById(`${e.target.id}`);
     select.getElementsByClassName('expander')[0].classList.toggle('show');
 
-    // toggle show more / show less text
+    // toggle "show more" / "show less" text
     let text = select.getElementsByTagName('a')[0];
     select.getElementsByClassName('expander')[0].classList.contains('show')
       ? (text.innerHTML = '&nbsp;Show Less')
