@@ -184,7 +184,7 @@ function ContactCard(props) {
     className: "fas fa-pen"
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     onClick: props.onSubmit,
-    className: "btn secondary-button"
+    className: "btn invert-button"
   }, "Send"));
 }
 
