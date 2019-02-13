@@ -152,64 +152,40 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ContactCard; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-function _defineProperty(obj, key, value) {
-  if (key in obj) {
-    Object.defineProperty(obj, key, {
-      value: value,
-      enumerable: true,
-      configurable: true,
-      writable: true
-    });
-  } else {
-    obj[key] = value;
-  }
 
-  return obj;
-}
-
-
-class ContactCard extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
-  constructor() {
-    super(...arguments);
-
-    _defineProperty(this, "onSubmit", e => {
-      e.preventDefault();
-      document.getElementById('form').reset(); // TODO: expose pop up modal with X to close saying message sent!
-    });
-  }
-
-  render() {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "form-input-container"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-      type: "text",
-      placeholder: "Name",
-      required: ""
-    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-      className: "fas fa-user"
-    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "form-input-container"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-      type: "text",
-      placeholder: "example@email.com",
-      required: ""
-    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-      className: "fas fa-envelope"
-    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "form-input-container"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
-      placeholder: "Message",
-      cols: "30",
-      rows: "10",
-      required: ""
-    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-      className: "fas fa-pen"
-    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-      onClick: this.onSubmit,
-      className: "btn secondary-button"
-    }, "Send"));
-  }
-
+function ContactCard(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "form-input-container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    id: "name",
+    type: "text",
+    placeholder: "Name",
+    required: ""
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "fas fa-user"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "form-input-container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    id: "email",
+    type: "text",
+    placeholder: "example@email.com",
+    required: ""
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "fas fa-envelope"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "form-input-container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
+    id: "message",
+    placeholder: "Message",
+    cols: "30",
+    rows: "10",
+    required: ""
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "fas fa-pen"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    onClick: props.onSubmit,
+    className: "btn secondary-button"
+  }, "Send"));
 }
 
 /***/ }),
@@ -227,16 +203,74 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _ContactCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ContactCard */ "./src/components/Contact/ContactCard.js");
+/* harmony import */ var _Modal_ModalDeck__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Modal/ModalDeck */ "./src/components/Modal/ModalDeck.js");
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
+}
 
 
-function ContactDeck() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
-    id: "contact",
-    className: "form-title title small-space"
-  }, "Contact"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
-    id: "form",
-    className: "contact-container gradient container column shadow big-space"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ContactCard__WEBPACK_IMPORTED_MODULE_1__["default"], null)));
+
+
+class ContactDeck extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  constructor(props) {
+    super(props);
+
+    _defineProperty(this, "onChange", e => {
+      let value = e.target.value;
+      this.setState({
+        [e.target.id]: value
+      });
+    });
+
+    _defineProperty(this, "onSubmit", e => {
+      e.preventDefault();
+      document.getElementsByClassName('modal-container')[0].classList.toggle('show');
+      document.getElementsByTagName('body')[0].classList.toggle('show');
+      document.getElementById('form').reset();
+    });
+
+    _defineProperty(this, "exitModal", () => {
+      document.getElementsByClassName('modal-container')[0].classList.toggle('show');
+      document.getElementsByTagName('body')[0].classList.toggle('show');
+    });
+
+    this.state = {
+      name: '',
+      email: '',
+      message: ''
+    };
+    this.onChange = this.onChange.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
+    this.exitModal = this.exitModal.bind(this);
+  }
+
+  render() {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Modal_ModalDeck__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      info: this.state,
+      exit: this.exitModal
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+      id: "contact",
+      className: "form-title title small-space"
+    }, "Contact"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+      onChange: this.onChange,
+      id: "form",
+      className: "contact-container gradient container column shadow big-space"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ContactCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      onSubmit: this.onSubmit
+    })));
+  }
+
 }
 
 /***/ }),
@@ -561,6 +595,58 @@ function MenuHamburger(props) {
 
 /***/ }),
 
+/***/ "./src/components/Modal/ModalCard.js":
+/*!*******************************************!*\
+  !*** ./src/components/Modal/ModalCard.js ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ModalCard; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+function ModalCard(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "modal shadow container column"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "small-space"
+  }, `Thank you for your interest, ${props.info.name}! Your message has been sent to the team and they will reply as soon as possible!`), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "modal-button btn secondary-button",
+    onClick: props.exit
+  }, "Close"));
+}
+
+/***/ }),
+
+/***/ "./src/components/Modal/ModalDeck.js":
+/*!*******************************************!*\
+  !*** ./src/components/Modal/ModalDeck.js ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ModalDeck; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _ModalCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ModalCard */ "./src/components/Modal/ModalCard.js");
+
+
+function ModalDeck(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "modal-container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    info: props.info,
+    exit: props.exit
+  }));
+}
+
+/***/ }),
+
 /***/ "./src/components/Roles/RoleCard.js":
 /*!******************************************!*\
   !*** ./src/components/Roles/RoleCard.js ***!
@@ -596,7 +682,7 @@ class RoleCard extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     _defineProperty(this, "readMore", e => {
       // show/hide expander
       let select = document.getElementById(`${e.target.id}`);
-      select.getElementsByClassName('expander')[0].classList.toggle('show'); // toggle show more / show less text
+      select.getElementsByClassName('expander')[0].classList.toggle('show'); // toggle "show more" / "show less" text
 
       let text = select.getElementsByTagName('a')[0];
       select.getElementsByClassName('expander')[0].classList.contains('show') ? text.innerHTML = '&nbsp;Show Less' : text.innerHTML = '&nbsp;Read More';

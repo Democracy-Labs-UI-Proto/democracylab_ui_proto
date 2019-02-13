@@ -30,15 +30,13 @@
       // handles the card expansion
       .expander {
         @include easeOut();
-        max-height: 0;
+        height: 0;
         opacity: 0;
         min-height: 0;
         overflow: hidden;
         margin-top: 0;
         &.show {
-          max-height: 150px;
-          // min-height: 200px;
-          overflow: scroll;
+          height: auto;
           margin-top: 30px;
           opacity: 1;
           margin-bottom: 20px;

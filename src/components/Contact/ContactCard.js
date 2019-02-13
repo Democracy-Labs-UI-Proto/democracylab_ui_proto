@@ -14,7 +14,7 @@ export default function ContactCard(props) {
         <textarea id="message" placeholder="Message" cols="30" rows="10" required="" />
         <i className="fas fa-pen" />
       </div>
-      <button onClick={props.onSubmit} className="btn secondary-button">
+      <button onClick={props.onSubmit} className="btn invert-button">
         Send
       </button>
     </Fragment>
